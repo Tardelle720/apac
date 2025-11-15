@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestor Apac — Transações</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="./Style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h2 class="titulo">FINANCEIRO APAC</h2>
+      <nav class="menu">
+        <a href="home.html">🏠 Home</a>
+        <a href="index.html" class="active">📋 Transações</a>
+        <a href="extratos.html">📄 Extratos</a>
+        <a href="relatorios.html">📊 Relatórios</a>
+        <a href="">❌ Sair</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="balance" aria-labelledby="balanco-title">
+        <h2 id="balanco-title" class="sr-only">Balanço</h2>
+
+        <div class="card">
+          <h3>
+            <span>Receitas</span
+            ><img src="./images/Entradas.png" alt="Entradas" />
+          </h3>
+          <p id="incomeDisplay">R$ 0,00</p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <span>Despesas</span><img src="./images/Saídas.png" alt="Saídas" />
+          </h3>
+          <p id="expenseDisplay">R$ 0,00</p>
+        </div>
+
+        <div class="card total">
+          <h3>
+            <span>Total</span><img src="./images/total.svg" alt="Total" />
+          </h3>
+          <p id="totalDisplay">R$ 0,00</p>
+        </div>
+      </section>
+
+      <section id="transaction" aria-labelledby="transacoes-title">
+        <h2 id="transacoes-title" class="sr-only">Transações</h2>
+
+        <!-- botão que abre modal -->
+        <button type="button" onclick="Modal.open()" class="button new">
+          + Nova Transação
+        </button>
+
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Categoria</th>
+              <th>Valor</th>
+              <th>Data</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <div style="margin-top: 1rem">
+          <button id="gerate-pdf">+ Gerar PDF</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal - incluído em todas as páginas (mesmo HTML em home/extratos/relatorios) -->
+    <div class="modal-overlay">
+      <div class="modal">
+        <div id="form">
+          <h2>Nova Transação</h2>
+          <form onsubmit="Form.submit(event)">
+            <div class="input-group">
+              <label class="sr-only" for="description">Descrição</label>
+              <input
+                type="text"
+                id="description"
+                name="description"
+                placeholder="Descrição"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="category">Categoria</label>
+              <select id="category">
+                <option value="Alimentação">Alimentação</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Lazer">Lazer</option>
+                <option value="Saúde">Saúde</option>
+                <option value="Moradia">Luz</option>
+                <option value="Educação">Agua</option>
+                <option value="Salário">Salário de colaborador</option>
+                <option value="Outros">Outros</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label class="sr-only" for="amount">Valor</label>
+              <input type="text" id="amount" name="amount" placeholder="0,00" />
+              <small class="help"
+                >Use sinal - para despesas e vírgula para decimais (ex:
+                -123,45)</small
+              >
+            </div>
+
+            <div class="input-group">
+              <label class="sr-only" for="date">Data</label>
+              <input type="date" id="date" name="date" />
+            </div>
+
+            <div class="input-group actions">
+              <a
+                href="javascript:void(0)"
+                onclick="Modal.close()"
+                class="button cancel"
+                >Cancelar</a
+              >
+              <button type="submit">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer><p>Apac.finance$</p></footer>
+
+    <script src="./script.js"></script>
+    <script>
+      // Gerar PDF (usa o estado atual do DOM)
+      document
+        .getElementById("gerate-pdf")
+        .addEventListener("click", function () {
+          const pdfContainer = document.createElement("div");
+          pdfContainer.style.padding = "20px";
+          pdfContainer.style.fontFamily = "'Poppins', sans-serif";
+          pdfContainer.style.color = "#363f5f";
+
+          const title = document.createElement("h2");
+          title.textContent = "Relatório Financeiro APAC";
+          title.style.textAlign = "center";
+          title.style.marginBottom = "20px";
+          pdfContainer.appendChild(title);
+
+          const balanceSummary = document.createElement("div");
+          balanceSummary.style.display = "flex";
+          balanceSummary.style.justifyContent = "space-between";
+          balanceSummary.style.marginBottom = "20px";
+
+          const incomes = document.createElement("div");
+          incomes.textContent = `Receitas: ${
+            document.getElementById("incomeDisplay").textContent
+          }`;
+          const expenses = document.createElement("div");
+          expenses.textContent = `Despesas: ${
+            document.getElementById("expenseDisplay").textContent
+          }`;
+          const total = document.createElement("div");
+          total.textContent = `Total: ${
+            document.getElementById("totalDisplay").textContent
+          }`;
+
+          balanceSummary.appendChild(incomes);
+          balanceSummary.appendChild(expenses);
+          balanceSummary.appendChild(total);
+          pdfContainer.appendChild(balanceSummary);
+
+          const tableClone = document
+            .querySelector("#data-table")
+            .cloneNode(true);
+          tableClone.style.width = "100%";
+          tableClone.style.borderCollapse = "collapse";
+          tableClone
+            .querySelectorAll("td:last-child, th:last-child")
+            .forEach((el) => el.remove());
+          tableClone.querySelectorAll("th, td").forEach((cell) => {
+            cell.style.border = "1px solid #ccc";
+            cell.style.padding = "8px";
+          });
+
+          pdfContainer.appendChild(tableClone);
+
+          const dateTime = document.createElement("p");
+          const now = new Date();
+          dateTime.textContent = `Gerado em: ${now.toLocaleString("pt-BR")}`;
+          dateTime.style.textAlign = "right";
+          dateTime.style.marginTop = "20px";
+          pdfContainer.appendChild(dateTime);
+
+          const options = {
+            margin: 10,
+            filename: "Relatorio_APAC.pdf",
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: { scale: 2, logging: true, scrollY: 0 },
+            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+          };
+
+          html2pdf().set(options).from(pdfContainer).save();
+        });
+    </script>
+  </body>
+</html>

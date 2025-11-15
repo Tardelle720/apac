@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Extratos</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <header>
+    <h2 class="titulo">FINANCEIRO APAC</h2>
+    <nav class="menu">
+      <a href="home.html">🏠 Home</a>
+      <a href="index.html">📋 Transações</a>
+      <a href="extratos.html" class="active">📄 Extratos</a>
+      <a href="relatorios.html">📊 Relatórios</a>
+      <a href="">❌ Sair</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Extratos</h2>
+
+    <div class="card">
+      <label>Data início</label>
+      <input type="date" id="dataInicio">
+
+      <label>Data fim</label>
+      <input type="date" id="dataFim">
+
+      <label>Categoria (opcional)</label>
+      <input type="text" id="filtroCategoria" placeholder="Filtrar por categoria">
+
+      <button onclick="filtrarExtrato()">Filtrar</button>
+      <button id="limparFiltro" style="margin-top:8px;">Limpar filtros</button>
+    </div>
+
+    <div class="container">
+        <table id="extrato-table">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Categoria</th>
+          <th>Valor</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    </div>
+    
+
+    <div style="margin-top:1rem;">
+      <button id="gerarPDFExtrato">Gerar PDF</button>
+      
+    </div>
+  </main>
+  <footer><p>Apac.finance$</p></footer>
+
+  <script src="./script.js"></script>
+  <script>
+    const transacoes = JSON.parse(localStorage.getItem("dev.finances:transactions")) || [];
+    const tbody = document.querySelector("#extrato-table tbody");
+
+    function mostrarLista(lista){
+      tbody.innerHTML = "";
+      lista.forEach(t => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td class="description">${t.description}</td>
+          <td>${t.category || ""}</td>
+          <td class="${t.amount>0?'income':'expense'}">${(t.amount/100).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}</td>
+          <td>${t.date}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function formatDateInput(d){
+      if(!d) return null;
+      const [y,m,day] = d.split("-");
+      return `${day}/${m}/${y}`;
+    }
+
+    function filtrarExtrato(){
+      let lista = transacoes.slice();
+      const inicio = document.getElementById("dataInicio").value;
+      const fim = document.getElementById("dataFim").value;
+      const cat = document.getElementById("filtroCategoria").value.trim().toLowerCase();
+
+      if(inicio){
+        const f = formatDateInput(inicio);
+        lista = lista.filter(t => t.date >= f);
+      }
+      if(fim){
+        const f = formatDateInput(fim);
+        lista = lista.filter(t => t.date <= f);
+      }
+      if(cat){
+        lista = lista.filter(t => (t.category || "").toLowerCase().includes(cat));
+      }
+
+      mostrarLista(lista);
+    }
+
+    document.getElementById("limparFiltro").addEventListener("click", () => {
+      document.getElementById("dataInicio").value = "";
+      document.getElementById("dataFim").value = "";
+      document.getElementById("filtroCategoria").value = "";
+      mostrarLista(transacoes);
+    });
+
+    // mostrar tudo ao carregar
+    mostrarLista(transacoes);
+
+    // gerar pdf do conteúdo principal
+    document.getElementById("gerarPDFExtrato").addEventListener("click", () => {
+      html2pdf().set({
+        margin: 10,
+        filename: "Extrato_APAC.pdf",
+        html2canvas: { scale: 2 },
+        jsPDF: { format: "a4" }
+      }).from(document.querySelector("main")).save();
+    });
+  </script>
+</body>
+</html>
