@@ -221,7 +221,6 @@ td.expense {
   z-index: 1;
   border-radius: 8px;
 }
-
 /* form */
 #form {
   max-width: 500px;
@@ -265,11 +264,43 @@ footer {
   html {
     font-size: 87.5%;
   }
+
   #balance {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
+
+  .menu {
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 799px) {
+ .menu {
+    overflow-x: auto;       /* scroll lateral */
+    white-space: nowrap;    /* impede quebrar linha */
+    padding-bottom: 0.5rem;
+  }
+
+  .menu a {
+    display: inline-block;  /* itens continuam lado a lado */
+    padding: 8px 10px;
+  }
+  }
+  
+  @media (min-width: 800px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  #balance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
   .menu {
     justify-content: flex-start;
     padding: 1rem 2rem;
