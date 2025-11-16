@@ -43,6 +43,7 @@ header {
   color: white;
 }
 .menu {
+
   gap: 1rem;
   background: white;
   padding: 0.6rem;
@@ -60,7 +61,10 @@ header {
     text-align: center;
     margin: 10px 0;
 }
-
+nav #menu li {
+  margin: 4px;
+  display: inline;
+}
 .menu a {
   color: var(--dark-blue);
   text-decoration: none;
