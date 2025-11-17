@@ -39,92 +39,162 @@
 
     <div class="container">
         <table id="extrato-table">
-      <thead>
-        <tr>
-          <th>Descrição</th>
-          <th>Categoria</th>
-          <th>Valor</th>
-          <th>Data</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Categoria</th>
+              <th>Valor</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
     </div>
-    
 
     <div style="margin-top:1rem;">
       <button id="gerarPDFExtrato">Gerar PDF</button>
-      
     </div>
+
   </main>
+
   <footer><p>Apac.finance$</p></footer>
 
-  <script src="./script.js"></script>
   <script>
-    const transacoes = JSON.parse(localStorage.getItem("dev.finances:transactions")) || [];
-    const tbody = document.querySelector("#extrato-table tbody");
+const transacoes = JSON.parse(localStorage.getItem("dev.finances:transactions")) || [];
+const tbody = document.querySelector("#extrato-table tbody");
 
-    function mostrarLista(lista){
-      tbody.innerHTML = "";
-      lista.forEach(t => {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td class="description">${t.description}</td>
-          <td>${t.category || ""}</td>
-          <td class="${t.amount>0?'income':'expense'}">${(t.amount/100).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}</td>
-          <td>${t.date}</td>
-        `;
-        tbody.appendChild(tr);
-      });
-    }
+// monta lista na tela
+function mostrarLista(lista){
+  tbody.innerHTML = "";
+  lista.forEach(t => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="description">${t.description}</td>
+      <td>${t.category || ""}</td>
+      <td class="${t.amount>0?'income':'expense'}">
+        ${(t.amount/100).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
+      </td>
+      <td>${t.date}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
 
-    function formatDateInput(d){
-      if(!d) return null;
-      const [y,m,day] = d.split("-");
-      return `${day}/${m}/${y}`;
-    }
+mostrarLista(transacoes);
 
-    function filtrarExtrato(){
-      let lista = transacoes.slice();
-      const inicio = document.getElementById("dataInicio").value;
-      const fim = document.getElementById("dataFim").value;
-      const cat = document.getElementById("filtroCategoria").value.trim().toLowerCase();
+function formatDateInput(d){
+  if(!d) return null;
+  const [y,m,day] = d.split("-");
+  return `${day}/${m}/${y}`;
+}
 
-      if(inicio){
-        const f = formatDateInput(inicio);
-        lista = lista.filter(t => t.date >= f);
-      }
-      if(fim){
-        const f = formatDateInput(fim);
-        lista = lista.filter(t => t.date <= f);
-      }
-      if(cat){
-        lista = lista.filter(t => (t.category || "").toLowerCase().includes(cat));
-      }
+function filtrarExtrato(){
+  let lista = transacoes.slice();
+  const inicio = document.getElementById("dataInicio").value;
+  const fim = document.getElementById("dataFim").value;
+  const cat = document.getElementById("filtroCategoria").value.trim().toLowerCase();
 
-      mostrarLista(lista);
-    }
+  if(inicio){
+    const f = formatDateInput(inicio);
+    lista = lista.filter(t => t.date >= f);
+  }
+  if(fim){
+    const f = formatDateInput(fim);
+    lista = lista.filter(t => t.date <= f);
+  }
+  if(cat){
+    lista = lista.filter(t => (t.category || "").toLowerCase().includes(cat));
+  }
 
-    document.getElementById("limparFiltro").addEventListener("click", () => {
-      document.getElementById("dataInicio").value = "";
-      document.getElementById("dataFim").value = "";
-      document.getElementById("filtroCategoria").value = "";
-      mostrarLista(transacoes);
-    });
+  mostrarLista(lista);
+}
 
-    // mostrar tudo ao carregar
-    mostrarLista(transacoes);
+document.getElementById("limparFiltro").addEventListener("click", () => {
+  document.getElementById("dataInicio").value = "";
+  document.getElementById("dataFim").value = "";
+  document.getElementById("filtroCategoria").value = "";
+  mostrarLista(transacoes);
+});
 
-    // gerar pdf do conteúdo principal
-    document.getElementById("gerarPDFExtrato").addEventListener("click", () => {
-      html2pdf().set({
-        margin: 10,
-        filename: "Extrato_APAC.pdf",
-        html2canvas: { scale: 2 },
-        jsPDF: { format: "a4" }
-      }).from(document.querySelector("main")).save();
-    });
-  </script>
+// ---- GERAR PDF PADRÃO DO INDEX ----
+
+document.getElementById("gerarPDFExtrato").addEventListener("click", () => {
+
+  const inicio = document.getElementById("dataInicio").value;
+  const fim = document.getElementById("dataFim").value;
+
+  let periodo = "Todos";
+  if(inicio || fim){
+    const iniFmt = inicio ? formatDateInput(inicio) : "??/??/????";
+    const fimFmt = fim ? formatDateInput(fim) : "??/??/????";
+    periodo = iniFmt + " até " + fimFmt;
+  }
+
+  // calcular totais
+  const linhasTabela = [...document.querySelectorAll("#extrato-table tbody tr")];
+  let entrada = 0, saida = 0;
+
+  linhasTabela.forEach(l => {
+    const valorTxt = l.children[2].innerText.replace("R$", "").replace(/\./g,"").replace(",",".").trim();
+    const valor = Number(valorTxt);
+
+    if(valor > 0) entrada += valor;
+    else saida += valor;
+  });
+
+  const saldo = entrada + saida;
+  const dataHoje = new Date().toLocaleString("pt-BR");
+
+  // montar HTML do PDF (mesmo padrão do index)
+  const pdfHTML = `
+    <div style="text-align:center;">
+      <h1>APAC Finance</h1>
+      <h2>Extrato Financeiro</h2>
+      <small>Gerado em: ${dataHoje}</small>
+      <hr style="margin:20px 0;">
+    </div>
+
+    <p><strong>Período:</strong> ${periodo}</p>
+    <p><strong>Entrada:</strong> R$ ${entrada.toFixed(2).replace(".",",")}</p>
+    <p><strong>Saída:</strong> R$ ${saida.toFixed(2).replace(".",",")}</p>
+    <p><strong>Saldo:</strong> R$ ${saldo.toFixed(2).replace(".",",")}</p>
+
+    <br>
+
+   <table style="width:100%; border-collapse:collapse; font-size:14px; border:1px solid #ccc;">
+  <tr style="background:white; color:black;">
+    <td style="padding:8px; border:1px solid #ccc; font-weight:bold;">Descrição</td>
+    <td style="padding:8px; border:1px solid #ccc; font-weight:bold;">Categoria</td>
+    <td style="padding:8px; border:1px solid #ccc; font-weight:bold;">Valor</td>
+    <td style="padding:8px; border:1px solid #ccc; font-weight:bold;">Data</td>
+  </tr>
+  ${
+    linhasTabela.map(l => `
+      <tr>
+        <td style="padding:6px; border:1px solid #ddd;">${l.children[0].innerText}</td>
+        <td style="padding:6px; border:1px solid #ddd;">${l.children[1].innerText}</td>
+        <td style="padding:6px; border:1px solid #ddd;">${l.children[2].innerText}</td>
+        <td style="padding:6px; border:1px solid #ddd;">${l.children[3].innerText}</td>
+      </tr>
+    `).join("")
+  }
+</table>
+  `;
+
+  const wrapper = document.createElement("div");
+  wrapper.innerHTML = pdfHTML;
+
+  html2pdf()
+    .set({
+      margin: 10,
+      filename: "Extrato_APAC.pdf",
+      html2canvas: { scale: 2 },
+      jsPDF: { format: "a4" }
+    })
+    .from(wrapper)
+    .save();
+});
+</script>
+
 </body>
 </html>
