@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Relatórios</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+      <h2 class="titulo">FINANCEIRO APAC</h2>
+      <nav class="menu">
+        <li><a href="home.html">🏠 Home</a></li>
+        <li><a href="index.html" class="active">📋 Transações</a></li>
+        <li><a href="extratos.html">📄 Extratos</a></li>
+        <li><a href="relatorios.html">📊 Relatórios</a></li>
+        <li><a href="">❌ Sair</a></li>
+      </nav>
+    </header>
+
+  <main class="container">
+    <h2>Relatórios</h2>
+
+    <h3>Por Categoria (Total)</h3>
+    <canvas id="chartCategoria" style="max-height:300px;"></canvas>
+
+    <h3 style="margin-top:2rem;">Por Mês</h3>
+    <canvas id="chartPorMes" style="max-height:300px;"></canvas>
+  </main>
+  <footer><p>Apac.finance$</p></footer>
+
+  <script src="./script.js"></script>
+  <script src="./charts.js"></script>
+  <script>
+    // Monta os gráficos de relatório (por categoria e por mês)
+    (function(){
+      const dados = JSON.parse(localStorage.getItem("dev.finances:transactions")) || [];
+
+      // por categoria
+      const porCat = {};
+      dados.forEach(t => {
+        const c = (t.category || "Sem categoria");
+        if(!porCat[c]) porCat[c] = 0;
+        porCat[c] += t.amount;
+      });
+
+      new Chart(document.getElementById("chartCategoria"), {
+        type: 'pie',
+        data: {
+          labels: Object.keys(porCat),
+          datasets: [{
+            data: Object.values(porCat).map(v => v/100)
+          }]
+        }
+      });
+
+      // por mês
+      const porMes = {};
+      dados.forEach(t => {
+        const [dia, mes, ano] = t.date.split('/');
+        const key = `${mes}/${ano}`;
+        if(!porMes[key]) porMes[key] = 0;
+        porMes[key] += t.amount;
+      });
+
+      new Chart(document.getElementById("chartPorMes"), {
+        type: 'line',
+        data: {
+          labels: Object.keys(porMes),
+          datasets: [{
+            label: 'Total mensal',
+            data: Object.values(porMes).map(v => v/100),
+            borderWidth: 2,
+            borderColor: '#001051'
+          }]
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
