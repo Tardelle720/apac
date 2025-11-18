@@ -55,6 +55,12 @@ header {
   margin-right: auto;
 }
 
+.menu a:hover {
+  background: #001051;
+  color: #fff;
+}
+
+
 .menu ul {
     display: block;
     text-align: center;

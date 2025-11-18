@@ -1,13 +1,11 @@
-/* charts.js — inicializa gráficos a partir do localStorage */
+/* charts.js — inicializa gráficos */
 document.addEventListener("DOMContentLoaded", () => {
   const transactions = JSON.parse(localStorage.getItem("dev.finances:transactions")) || [];
 
-  // calcular valores
   const incomes = transactions.filter(t => t.amount > 0).reduce((s,t) => s + t.amount, 0);
   const expenses = transactions.filter(t => t.amount < 0).reduce((s,t) => s + t.amount, 0);
   const total = incomes + expenses;
 
-  // atualizar cards se existirem
   const elIncome = document.getElementById("incomeHome") || document.getElementById("incomeDisplay");
   const elExpense = document.getElementById("expenseHome") || document.getElementById("expenseDisplay");
   const elTotal = document.getElementById("totalHome") || document.getElementById("totalDisplay");
@@ -15,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if(elExpense) elExpense.textContent = (expenses/100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
   if(elTotal) elTotal.textContent = (total/100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
-  // Chart Resumo (barras) se existir
+  // Chart Resumo (barras)
   const ctxResumo = document.getElementById("chartResumo");
   if(ctxResumo){
     new Chart(ctxResumo, {
@@ -28,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Chart Linha por data se existir
+  // Chart Linha por data
   const byDate = {};
   transactions.forEach(t => {
     if(!byDate[t.date]) byDate[t.date] = 0;
@@ -53,6 +51,52 @@ document.addEventListener("DOMContentLoaded", () => {
           data: values,
           borderWidth: 2,
           tension: 0.2
+        }]
+      },
+      options: { responsive: true, maintainAspectRatio: false }
+    });
+  }
+
+  // Relatórios por categoria e mês (se existirem canvases)
+  const ctxCat = document.getElementById("chartCategoria");
+  if(ctxCat){
+    const porCat = {};
+    transactions.forEach(t => {
+      const c = (t.category || "Sem categoria");
+      if(!porCat[c]) porCat[c] = 0;
+      porCat[c] += t.amount;
+    });
+
+    new Chart(ctxCat, {
+      type: 'pie',
+      data: {
+        labels: Object.keys(porCat),
+        datasets: [{
+          data: Object.values(porCat).map(v => v/100)
+        }]
+      },
+      options: { responsive: true, maintainAspectRatio: false }
+    });
+  }
+
+  const ctxMes = document.getElementById("chartPorMes");
+  if(ctxMes){
+    const porMes = {};
+    transactions.forEach(t => {
+      const [dia, mes, ano] = t.date.split('/');
+      const key = `${mes}/${ano}`;
+      if(!porMes[key]) porMes[key] = 0;
+      porMes[key] += t.amount;
+    });
+
+    new Chart(ctxMes, {
+      type: 'line',
+      data: {
+        labels: Object.keys(porMes),
+        datasets: [{
+          label: 'Total mensal',
+          data: Object.values(porMes).map(v => v/100),
+          borderWidth: 2
         }]
       },
       options: { responsive: true, maintainAspectRatio: false }

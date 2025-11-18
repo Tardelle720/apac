@@ -7,18 +7,20 @@
 
   <link rel="stylesheet" href="./style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
  <header>
-      <h2 class="titulo">FINANCEIRO APAC</h2>
-      <nav class="menu">
-        <li><a href="home.html">🏠 Home</a></li>
-        <li><a href="index.html" class="active">📋 Transações</a></li>
-        <li><a href="extratos.html">📄 Extratos</a></li>
-        <li><a href="relatorios.html">📊 Relatórios</a></li>
-        <li><a href="">❌ Sair</a></li>
-      </nav>
-    </header>
+    <h2 class="titulo">FINANCEIRO APAC</h2>
+    <nav class="menu">
+      <a href="home.html">🏠 Home</a>
+      <a href="index.html">📋 Transações</a>
+      <a href="extratos.html">📄 Extratos</a>
+      <a href="relatorios.html">📊 Relatórios</a>
+      <a href="fornecedores/index.html">📊 Fornecedores</a>
+      <a href="">❌ Sair</a>
+    </nav>
+  </header>
 
   <main class="container">
     <h2>Extratos</h2>
@@ -37,31 +39,33 @@
       <button id="limparFiltro" style="margin-top:8px;">Limpar filtros</button>
     </div>
 
+    <!-- Tabela visível -->
     <div class="container">
-        <table id="extrato-table">
-      <thead>
-        <tr>
-          <th>Descrição</th>
-          <th>Categoria</th>
-          <th>Valor</th>
-          <th>Data</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-
+      <table id="extrato-table">
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Categoria</th>
+            <th>Valor</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
-    
 
     <div style="margin-top:1rem;">
       <button id="gerarPDFExtrato">Gerar PDF</button>
-      
     </div>
   </main>
+
   <footer><p>Apac.finance$</p></footer>
 
   <script src="./script.js"></script>
+
+  <!-- Script final do PDF profissional (substitui o anterior) -->
   <script>
+  (function(){
     const transacoes = JSON.parse(localStorage.getItem("dev.finances:transactions")) || [];
     const tbody = document.querySelector("#extrato-table tbody");
 
@@ -113,18 +117,87 @@
       mostrarLista(transacoes);
     });
 
-    // mostrar tudo ao carregar
+    // carregar tabela
     mostrarLista(transacoes);
 
-    // gerar pdf do conteúdo principal
+    // Gerar PDF profissional (padrão index)
     document.getElementById("gerarPDFExtrato").addEventListener("click", () => {
+      const inicio = document.getElementById("dataInicio").value;
+      const fim = document.getElementById("dataFim").value;
+
+      let periodo = "Todos";
+      if(inicio || fim){
+        const iniFmt = inicio ? formatDateInput(inicio) : "??/??/????";
+        const fimFmt = fim ? formatDateInput(fim) : "??/??/????";
+        periodo = iniFmt + " até " + fimFmt;
+      }
+
+      // monta linhas visíveis (após filtros aplicados)
+      const linhasTabela = [...document.querySelectorAll("#extrato-table tbody tr")];
+
+      // calcular totais a partir do objeto localStorage para maior segurança
+      let entrada = 0, saida = 0;
+      linhasTabela.forEach(l => {
+        const textoValor = l.children[2].innerText.replace("R$","").replace(/\./g,"").replace(",",".").trim();
+        const valor = Number(textoValor);
+        if(!isNaN(valor)){
+          if(valor > 0) entrada += valor;
+          else saida += valor;
+        }
+      });
+
+      const saldo = entrada + saida;
+      const dataHoje = new Date().toLocaleString("pt-BR");
+
+      // Monta HTML do PDF com cabeçalho branco e títulos em preto
+      const pdfHTML = `
+        <div style="font-family: 'Poppins', sans-serif; color:#363f5f; padding:18px;">
+          <div style="text-align:center;">
+            <h1 style="margin:0 0 6px 0;">APAC Finance</h1>
+            <h2 style="margin:0 0 6px 0;">Extrato Financeiro</h2>
+            <small style="color:#666;">Gerado em: ${dataHoje}</small>
+            <hr style="margin:12px 0;">
+          </div>
+
+          <p><strong>Período:</strong> ${periodo}</p>
+          <p><strong>Entrada:</strong> R$ ${entrada.toFixed(2).replace(".",",")}</p>
+          <p><strong>Saída:</strong> R$ ${saida.toFixed(2).replace(".",",")}</p>
+          <p><strong>Saldo:</strong> R$ ${saldo.toFixed(2).replace(".",",")}</p>
+
+          <br>
+
+          <table style="width:100%; border-collapse:collapse; font-size:13px; border:1px solid #ccc;">
+            <tr style="background:white; color:black;">
+              <td style="padding:8px; border:1px solid #ccc; font-weight:bold;">Descrição</td>
+              <td style="padding:8px; border:1px solid #ccc; font-weight:bold;">Categoria</td>
+              <td style="padding:8px; border:1px solid #ccc; font-weight:bold;">Valor</td>
+              <td style="padding:8px; border:1px solid #ccc; font-weight:bold;">Data</td>
+            </tr>
+            ${
+              linhasTabela.map(l => `
+                <tr>
+                  <td style="padding:6px; border:1px solid #ddd;">${l.children[0].innerText}</td>
+                  <td style="padding:6px; border:1px solid #ddd;">${l.children[1].innerText}</td>
+                  <td style="padding:6px; border:1px solid #ddd;">${l.children[2].innerText}</td>
+                  <td style="padding:6px; border:1px solid #ddd;">${l.children[3].innerText}</td>
+                </tr>
+              `).join("")
+            }
+          </table>
+        </div>
+      `;
+
+      const wrapper = document.createElement("div");
+      wrapper.innerHTML = pdfHTML;
+
       html2pdf().set({
         margin: 10,
         filename: "Extrato_APAC.pdf",
         html2canvas: { scale: 2 },
         jsPDF: { format: "a4" }
-      }).from(document.querySelector("main")).save();
+      }).from(wrapper).save();
     });
+  })();
   </script>
 </body>
 </html>

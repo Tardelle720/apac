@@ -7,19 +7,22 @@
 
   <link rel="stylesheet" href="./style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-      <h2 class="titulo">FINANCEIRO APAC</h2>
-      <nav class="menu">
-        <li><a href="home.html">🏠 Home</a></li>
-        <li><a href="index.html" class="active">📋 Transações</a></li>
-        <li><a href="extratos.html">📄 Extratos</a></li>
-        <li><a href="relatorios.html">📊 Relatórios</a></li>
-        <li><a href="">❌ Sair</a></li>
-      </nav>
-    </header>
+ <header>
+    <h2 class="titulo">FINANCEIRO APAC</h2>
+    <nav class="menu">
+      <a href="home.html">🏠 Home</a>
+      <a href="index.html">📋 Transações</a>
+      <a href="extratos.html">📄 Extratos</a>
+      <a href="relatorios.html">📊 Relatórios</a>
+      <a href="fornecedores/index.html">📊 Fornecedores</a>
+      <a href="">❌ Sair</a>
+    </nav>
   </header>
+
 
   <main class="container">
     <section id="balance">
@@ -38,47 +41,15 @@
     </section>
 
     <h2>Resumo Geral</h2>
-    <canvas id="chartResumo" style="max-height:300px;"></canvas>
+    <div style="height:300px;"><canvas id="chartResumo"></canvas></div>
 
     <h2 style="margin-top:2rem;">Movimentação por Data</h2>
-    <canvas id="chartLinha" style="max-height:300px;"></canvas>
-  </main>
+    <div style="height:300px;"><canvas id="chartLinha"></canvas></div>
 
-  <!-- Modal (mesmo HTML) -->
-  <div class="modal-overlay">
-    <div class="modal">
-      <div id="form">
-        <h2>Nova Transação</h2>
-        <form onsubmit="Form.submit(event)">
-          <div class="input-group">
-            <label class="sr-only" for="description">Descrição</label>
-            <input type="text" id="description" name="description" placeholder="Descrição" />
-          </div>
-
-          <div class="input-group">
-            <label class="sr-only" for="category">Categoria</label>
-            <input type="text" id="category" name="category" placeholder="Categoria (ex: Alimentação, Salário)" />
-          </div>
-
-          <div class="input-group">
-            <label class="sr-only" for="amount">Valor</label>
-            <input type="text" id="amount" name="amount" placeholder="0,00" />
-          </div>
-
-          <div class="input-group">
-            <label class="sr-only" for="date">Data</label>
-            <input type="date" id="date" name="date" />
-          </div>
-
-          <div class="input-group actions">
-            <a href="javascript:void(0)" onclick="Modal.close()" class="button cancel">Cancelar</a>
-            <button type="submit">Salvar</button>
-          </div>
-        </form>
-      </div>
+    <div style="margin-top:2rem;">
+      <button type="button" onclick="Modal.open()" class="button new">+ Nova Transação</button>
     </div>
-  </div>
-
+  </main>
   <footer><p>Apac.finance$</p></footer>
 
   <script src="./script.js"></script>
