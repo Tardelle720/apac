@@ -1,0 +1,196 @@
+/* Remove margens padrão e define fonte */
+body {
+    margin: 0;
+    background: #ffffff; /* Fundo claro */
+    font-family: poppins, sans-serif;
+}
+
+/* Container com layout lado a lado */
+.container {
+    display: flex; /* Coloca elementos lado a lado */
+    height: 100vh; /* Altura total da tela */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Área esquerda onde fica o logo */
+.left {
+    margin-right: 80px; /* Espaço entre o logo e o card */
+}
+
+/* Estilo da imagem do logo */
+.logo {
+    width: 500px; /* Ajusta tamanho do logo */
+}
+
+/* Card azul do login */
+.login-card {
+    background: #5b74a0; /* Azul institucional */
+    padding: 60px ; /* Espaçamento interno */
+    border-radius: 25px; /* Arredonda bordas */
+    width: 350px; /* Largura fixa do card */
+    box-shadow: 10px 5px 20px rgba(0,0,0,0.15); /* Sombra suave */
+    color: white; /* Cor do texto */
+}
+
+/* Título do card */
+.login-card h1 {
+    color: #001051;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center; /* Centraliza */
+    margin-bottom:  60px 60px; /* Espaço abaixo */
+    font-size: 35px; /* Tamanho do texto */
+    position: relative;
+    top: -5px; 
+}
+
+/* Estilo dos campos (inputs) */
+.login-card input {
+    width: 100%; /* Campos ocupam toda a largura */
+    padding: 12px; /* Espaçamento interno */
+    margin: 15px -10px; /* Espaço entre campos */
+    border: none; /* Remove borda padrão */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 15px; /* Tamanho do texto */
+    position: relative; 
+    top: -10px; 
+}
+
+/* Botão de entrar */
+.login-card button {
+    width: 45%;
+    padding: 12px;
+    background: #002a6b; /* Azul escuro */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-top: 10px;
+    justify-content: center; 
+    cursor: pointer; /* Muda cursor ao passar */
+    font-weight: bold;
+    position:relative; 
+    left: 90px; 
+    top: -10px; 
+}
+
+/* Efeito ao passar o mouse */
+.login-card button:hover {
+    background: #001c4a; /* Azul ainda mais escuro */
+}
+
+/* Botao esqueceu a senha */
+.forgot-password {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 14px; 
+    margin: 20px; 
+    position: relative; 
+    left: 110px; 
+    top: -25px; 
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------
+   BASE — MOBILE FIRST (funciona para telas pequenas primeiro)
+--------------------------------------------------------------------*/
+html {
+  font-size: 100%; /* Define tamanho base da fonte (16px) */
+}
+
+.container {
+  display: grid; /* Ativa o layout de grid */
+  grid-template-columns: 1fr; /* 1 coluna no celular */
+  gap: 1.5rem; /* Espaçamento entre os elementos */
+  padding: 1rem; /* Espaçamento interno para não colar nas bordas */
+}
+
+
+/* -------------------------------------------------------------------
+   TELAS ≥ 600px — celulares grandes e tablets pequenos
+--------------------------------------------------------------------*/
+@media (min-width: 600px) {
+  
+  html {
+    font-size: 93%; /* Reduz um pouco a fonte para caber mais conteúdo */
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* Agora vira 2 colunas */
+    gap: 2rem; /* Aumenta o espaçamento entre os itens */
+  }
+}
+
+
+/* -------------------------------------------------------------------
+   TELAS ≥ 800px — tablets grandes e notebooks pequenos
+--------------------------------------------------------------------*/
+@media (min-width: 800px) {
+
+  html {
+    font-size: 87.5%; /* Deixa as fontes um pouco mais compactas */
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 2.5rem; /* Aumenta espaço entre os itens */
+  }
+}
+
+
+/* -------------------------------------------------------------------
+   TELAS ≥ 1024px — notebooks padrão
+--------------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+  html {
+    font-size: 90%; /* Ajuste fino para melhor leitura */
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr); /* Continua com 3 colunas */
+    max-width: 1100px; /* Limita largura para não ficar muito esticado */
+    margin: 0 auto; /* Centraliza o grid na tela */
+  }
+}
+
+
+/* -------------------------------------------------------------------
+   TELAS ≥ 1280px — monitores grandes
+--------------------------------------------------------------------*/
+@media (min-width: 1280px) {
+
+  html {
+    font-size: 100%; /* Volta ao tamanho original */
+  }
+
+  .container {
+    grid-template-columns: repeat(4, 1fr); /* Agora vira 4 colunas */
+    max-width: 1300px; /* Largura maior, mas ainda controlada */
+  }
+}
+
+
+/* -------------------------------------------------------------------
+   TELAS ≥ 1600px — monitores ultra-wide
+--------------------------------------------------------------------*/
+@media (min-width: 1600px) {
+
+  html {
+    font-size: 112%; /* Aumenta tamanho da fonte para melhorar leitura em telas enormes */
+  }
+
+  .container {
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas em telas ultra wide */
+    max-width: 1500px; /* Impede que o conteúdo fique exageradamente espalhado */
+  }
+}
+
