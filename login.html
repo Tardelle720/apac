@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Diz ao navegador que estamos usando HTML moderno -->
+
+<html lang="pt-BR">
+<!-- Informa que o idioma da página é português do Brasil -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1"/> 
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Permite utilizar acentos como á, ã, é, ç... -->
+
+    <title>Login - GESTOR APAC</title>
+    <!-- Nome que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="login.css">
+    <!-- Conecta este HTML ao arquivo CSS que contém o estilo visual -->
+</head>
+
+<body>
+<!-- Início do conteúdo visível na página -->
+
+    <div class="container">
+        <!-- Container principal que segura toda a estrutura da página -->
+
+        <div class="left">
+            <!-- Área do lado esquerdo (onde fica o logo) -->
+
+            <img src="logo_apac.png" class="logo">
+            <!-- Mostra a imagem do logo. "logo.png" deve estar na mesma pasta -->
+        </div>
+
+        <div class="login-card">
+            <!-- Card azul onde fica o formulário de login -->
+
+            <h1>LOGIN</h1>
+            <!-- Título do card -->
+
+            <form id="loginForm">
+            <!-- Formulário do login (com ID usado depois no JavaScript) -->
+
+                <input type="email" id="email" placeholder="Digite seu email" required>
+                <!-- Campo de email (type=email já valida formato automaticamente) -->
+
+                <input type="password" id="senha" placeholder="Digite seu senha" required>
+                <!-- Campo de senha (digitação fica oculta) -->
+
+                <p class="forgot-password">
+                    <a href="recuperar_senha.html">Esqueceu a senha?</a>
+                </p> 
+                <button type="submit">Entrar</button>
+                <!-- Botão que envia o formulário -->
+
+        
+            </form>
+            
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+    <!-- Conecta o arquivo JavaScript à página -->
+</body>
+</html>
