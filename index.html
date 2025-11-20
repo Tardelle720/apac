@@ -1,164 +1,203 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Gestor Apac — Transações</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestor Apac — Transações</title>
 
-  <link rel="stylesheet" href="Style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
- <header>
-    <h2 class="titulo">FINANCEIRO APAC</h2>
-    <nav class="menu">
-      <a href="home.html">🏠 Home</a>
-      <a href="index.html">📋 Transações</a>
-      <a href="extratos.html">📄 Extratos</a>
-      <a href="relatorios.html">📊 Relatórios</a>
-      <a href="fornecedores/index.html">📊 Fornecedores</a>
-      <a href="">❌ Sair</a>
-    </nav>
-  </header>
+    <link rel="stylesheet" href="Style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h2 class="titulo">FINANCEIRO APAC</h2>
+      <nav class="menu">
+        <a href="home.html">🏠 Home</a>
+        <a href="index.html">📋 Transações</a>
+        <a href="extratos.html">📄 Extratos</a>
+        <a href="relatorios.html">📊 Relatórios</a>
+        <a href="fornecedores/index.html">📊 Fornecedores</a>
+        <a href="">❌ Sair</a>
+      </nav>
+    </header>
 
+    <main class="container">
+      <section id="balance" aria-labelledby="balanco-title">
+        <h2 id="balanco-title" class="sr-only">Balanço</h2>
 
-  <main class="container">
-    <section id="balance" aria-labelledby="balanco-title">
-      <h2 id="balanco-title" class="sr-only">Balanço</h2>
+        <div class="card">
+          <h3>
+            <span>Receitas</span
+            ><img src="./images/Entradas.png" alt="Entradas" />
+          </h3>
+          <p id="incomeDisplay">R$ 0,00</p>
+        </div>
 
-      <div class="card">
-        <h3><span>Receitas</span><img src="./images/Entradas.png" alt="Entradas"></h3>
-        <p id="incomeDisplay">R$ 0,00</p>
-      </div>
+        <div class="card">
+          <h3>
+            <span>Despesas</span><img src="./images/Saídas.png" alt="Saídas" />
+          </h3>
+          <p id="expenseDisplay">R$ 0,00</p>
+        </div>
 
-      <div class="card">
-        <h3><span>Despesas</span><img src="./images/Saídas.png" alt="Saídas"></h3>
-        <p id="expenseDisplay">R$ 0,00</p>
-      </div>
+        <div class="card total">
+          <h3>
+            <span>Total</span><img src="./images/total.svg" alt="Total" />
+          </h3>
+          <p id="totalDisplay">R$ 0,00</p>
+        </div>
+      </section>
 
-      <div class="card total">
-        <h3><span>Total</span><img src="./images/total.svg" alt="Total"></h3>
-        <p id="totalDisplay">R$ 0,00</p>
-      </div>
-    </section>
+      <section id="transaction" aria-labelledby="transacoes-title">
+        <h2 id="transacoes-title" class="sr-only">Transações</h2>
 
-    <section id="transaction" aria-labelledby="transacoes-title">
-      <h2 id="transacoes-title" class="sr-only">Transações</h2>
+        <button type="button" onclick="Modal.open()" class="button new">
+          + Nova Transação
+        </button>
 
-      <button type="button" onclick="Modal.open()" class="button new">+ Nova Transação</button>
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Categoria</th>
+              <th>Valor</th>
+              <th>Data</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
 
-      <table id="data-table">
-        <thead>
-          <tr>
-            <th>Descrição</th>
-            <th>Categoria</th>
-            <th>Valor</th>
-            <th>Data</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+        <div style="margin-top: 1rem">
+          <button id="gerate-pdf">+ Gerar PDF</button>
+        </div>
+      </section>
+    </main>
 
-      <div style="margin-top:1rem;">
-        <button id="gerate-pdf">+ Gerar PDF</button>
-      </div>
-    </section>
-  </main>
+    <!-- Modal (replicado em todas as páginas) -->
+    <div class="modal-overlay">
+      <div class="modal">
+        <div id="form">
+          <h2>Nova Transação</h2>
+          <form onsubmit="Form.submit(event)">
+            <div class="input-group">
+              <label class="sr-only" for="description">Descrição</label>
+              <input
+                type="text"
+                id="description"
+                name="description"
+                placeholder="Descrição"
+              />
+            </div>
 
-  <!-- Modal (replicado em todas as páginas) -->
-  <div class="modal-overlay">
-    <div class="modal">
-      <div id="form">
-        <h2>Nova Transação</h2>
-        <form onsubmit="Form.submit(event)">
-          <div class="input-group">
-            <label class="sr-only" for="description">Descrição</label>
-            <input type="text" id="description" name="description" placeholder="Descrição" />
-          </div>
+            <div class="input-group">
+              <label class="sr-only" for="category">Categoria</label>
+              <select id="category" name="category">
+                <option value="Salário">Salário</option>
+                <option value="Alimentação">Alimentação</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Lazer">Lazer</option>
+                <option value="Saúde">Saúde</option>
+                <option value="Moradia">Moradia</option>
+                <option value="Educação">Educação</option>
+                <option value="Outros">Outros</option>
+              </select>
+            </div>
 
-          <div class="input-group">
-            <label class="sr-only" for="category">Categoria</label>
-            <select id="category" name="category">
-              <option value="Salário">Salário</option>
-              <option value="Alimentação">Alimentação</option>
-              <option value="Transporte">Transporte</option>
-              <option value="Lazer">Lazer</option>
-              <option value="Saúde">Saúde</option>
-              <option value="Moradia">Moradia</option>
-              <option value="Educação">Educação</option>
-              <option value="Outros">Outros</option>
-            </select>
-          </div>
+            <div class="input-group">
+              <label class="sr-only" for="amount">Valor</label>
+              <input type="text" id="amount" name="amount" placeholder="0,00" />
+              <small class="help"
+                >Use sinal - para despesas e vírgula para decimais (ex:
+                -123,45)</small
+              >
+            </div>
 
-          <div class="input-group">
-            <label class="sr-only" for="amount">Valor</label>
-            <input type="text" id="amount" name="amount" placeholder="0,00" />
-            <small class="help">Use sinal - para despesas e vírgula para decimais (ex: -123,45)</small>
-          </div>
+            <div class="input-group">
+              <label class="sr-only" for="date">Data</label>
+              <input type="date" id="date" name="date" />
+            </div>
 
-          <div class="input-group">
-            <label class="sr-only" for="date">Data</label>
-            <input type="date" id="date" name="date" />
-          </div>
-
-          <div class="input-group actions">
-            <a href="javascript:void(0)" onclick="Modal.close()" class="button cancel">Cancelar</a>
-            <button type="submit">Salvar</button>
-          </div>
-        </form>
+            <div class="input-group actions">
+              <a
+                href="javascript:void(0)"
+                onclick="Modal.close()"
+                class="button cancel"
+                >Cancelar</a
+              >
+              <button type="submit">Salvar</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
 
-  <footer><p>Apac.finance$</p></footer>
+    <footer><p>Apac.finance$</p></footer>
 
-  <script src="./script.js"></script>
-  <script>
-    // Gerar PDF resumido (index) — inclui header/cards + tabela
-    document.getElementById("gerate-pdf").addEventListener("click", () => {
-      // cria container temporário com cabeçalho + cards + tabela clonada
-      const container = document.createElement('div');
-      container.style.fontFamily = "'Poppins', sans-serif";
-      container.style.color = '#363f5f';
-      container.style.padding = '18px';
+    <script src="./script.js"></script>
+    <script>
+      // Gerar PDF resumido (index) — inclui header/cards + tabela
+      document.getElementById("gerate-pdf").addEventListener("click", () => {
+        // cria container temporário com cabeçalho + cards + tabela clonada
+        const container = document.createElement("div");
+        container.style.fontFamily = "'Poppins', sans-serif";
+        container.style.color = "#363f5f";
+        container.style.padding = "18px";
 
-      // título
-      const title = document.createElement('h2');
-      title.textContent = 'Relatório Financeiro APAC';
-      title.style.textAlign = 'center';
-      container.appendChild(title);
+        // título
+        const title = document.createElement("h2");
+        title.textContent = "Relatório Financeiro APAC";
+        title.style.textAlign = "center";
+        container.appendChild(title);
 
-      // resumo
-      const summary = document.createElement('div');
-      summary.style.display = 'flex';
-      summary.style.justifyContent = 'space-between';
-      summary.style.margin = '12px 0';
-      const inc = document.createElement('div'); inc.textContent = 'Receitas: ' + document.getElementById('incomeDisplay').textContent;
-      const exp = document.createElement('div'); exp.textContent = 'Despesas: ' + document.getElementById('expenseDisplay').textContent;
-      const tot = document.createElement('div'); tot.textContent = 'Total: ' + document.getElementById('totalDisplay').textContent;
-      summary.appendChild(inc); summary.appendChild(exp); summary.appendChild(tot);
-      container.appendChild(summary);
+        // resumo
+        const summary = document.createElement("div");
+        summary.style.display = "flex";
+        summary.style.justifyContent = "space-between";
+        summary.style.margin = "12px 0";
+        const inc = document.createElement("div");
+        inc.textContent =
+          "Receitas: " + document.getElementById("incomeDisplay").textContent;
+        const exp = document.createElement("div");
+        exp.textContent =
+          "Despesas: " + document.getElementById("expenseDisplay").textContent;
+        const tot = document.createElement("div");
+        tot.textContent =
+          "Total: " + document.getElementById("totalDisplay").textContent;
+        summary.appendChild(inc);
+        summary.appendChild(exp);
+        summary.appendChild(tot);
+        container.appendChild(summary);
 
-      // tabela clonada sem coluna de ações
-      const tableClone = document.querySelector('#data-table').cloneNode(true);
-      tableClone.querySelectorAll('td:last-child, th:last-child').forEach(n => n.remove());
-      tableClone.style.width = '100%';
-      tableClone.style.borderCollapse = 'collapse';
-      tableClone.querySelectorAll('th, td').forEach(cell => {
-        cell.style.border = '1px solid #ddd';
-        cell.style.padding = '8px';
+        // tabela clonada sem coluna de ações
+        const tableClone = document
+          .querySelector("#data-table")
+          .cloneNode(true);
+        tableClone
+          .querySelectorAll("td:last-child, th:last-child")
+          .forEach((n) => n.remove());
+        tableClone.style.width = "100%";
+        tableClone.style.borderCollapse = "collapse";
+        tableClone.querySelectorAll("th, td").forEach((cell) => {
+          cell.style.border = "1px solid #ddd";
+          cell.style.padding = "8px";
+        });
+        container.appendChild(tableClone);
+
+        html2pdf()
+          .set({
+            margin: 10,
+            filename: "Relatorio_APAC_Index.pdf",
+            html2canvas: { scale: 2 },
+            jsPDF: { format: "a4" },
+          })
+          .from(container)
+          .save();
       });
-      container.appendChild(tableClone);
-
-      html2pdf().set({
-        margin: 10,
-        filename: 'Relatorio_APAC_Index.pdf',
-        html2canvas: { scale: 2 },
-        jsPDF: { format: 'a4' }
-      }).from(container).save();
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
