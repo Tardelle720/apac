@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fornecedores - Listagem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../Style.css" />
+
+    <header>
+      <h2 class="titulo">FINANCEIRO APAC</h2>
+      <nav class="menu">
+        <a href="/home.html">🏠 Home</a>
+        <a href="/index.html">📋 Transações</a>
+        <a href="/extratos.html">📄 Extratos</a>
+        <a href="/relatorios.html">📊 Relatórios</a>
+        <a href="../fornecedores/fornecedor.html">📊 Fornecedores</a>
+        <a href="">❌ Sair</a>
+      </nav>
+    </header>
+
+    <style>
+
+        * {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 12px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background: #f4f4f4;
+      }
+      button.delete {
+        background: #e53935;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button.delete:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      .actions {
+        white-space: nowrap;
+      }
+      .msg {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fornecedores</h1>
+    <div>
+      <button id="refreshBtn">Atualizar lista</button>
+      <button id="createBtn" style="margin-left: 8px">
+        Cadastrar fornecedor
+      </button>
+    </div>
+
+    <div id="status" class="msg"></div>
+
+    <table id="fornecedoresTable" aria-live="polite">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Tipo Documento</th>
+          <th>Documento</th>
+          <th>Endereço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ...existing code... -->
+      </tbody>
+    </table>
+
+    <script>
+      // URL base do backend
+      const BASE = "http://localhost/backend/public/fornecedores";
+
+      const tableBody = document.querySelector("#fornecedoresTable tbody");
+      const statusEl = document.getElementById("status");
+      const refreshBtn = document.getElementById("refreshBtn");
+      const createBtn = document.getElementById("createBtn");
+
+      refreshBtn.addEventListener("click", loadFornecedores);
+      createBtn.addEventListener("click", () => {
+        // navega para o formulário de cadastro (mesma pasta)
+        window.location.href = "cadastro-fornecedor-form.html";
+      });
+
+      // Carrega e renderiza a lista
+      async function loadFornecedores() {
+        setStatus("Carregando...", false);
+        tableBody.innerHTML = "";
+        try {
+          const res = await fetch(BASE);
+          if (!res.ok)
+            throw new Error("Erro ao obter fornecedores: " + res.status);
+          const dados = await res.json();
+          if (!Array.isArray(dados)) {
+            setStatus("Resposta inválida do servidor", true);
+            return;
+          }
+          if (dados.length === 0) {
+            tableBody.innerHTML =
+              '<tr><td colspan="6">Nenhum fornecedor encontrado</td></tr>';
+            setStatus("", false);
+            return;
+          }
+          for (const f of dados) {
+            const tr = document.createElement("tr");
+
+            const idTd = document.createElement("td");
+            idTd.textContent = f.id;
+            const nomeTd = document.createElement("td");
+            nomeTd.textContent = f.nome;
+            const tipoTd = document.createElement("td");
+            tipoTd.textContent = f.tipo_documento == 2 ? "CNPJ" : "CPF";
+            const docTd = document.createElement("td");
+            docTd.textContent = f.documento;
+            const endTd = document.createElement("td");
+            endTd.textContent = f.endereco;
+
+            const actionsTd = document.createElement("td");
+            actionsTd.className = "actions";
+            const delBtn = document.createElement("button");
+            delBtn.className = "delete";
+            delBtn.textContent = "Excluir";
+            delBtn.addEventListener("click", () => confirmDelete(f.id, delBtn));
+            actionsTd.appendChild(delBtn);
+
+            tr.appendChild(idTd);
+            tr.appendChild(nomeTd);
+            tr.appendChild(tipoTd);
+            tr.appendChild(docTd);
+            tr.appendChild(endTd);
+            tr.appendChild(actionsTd);
+
+            tableBody.appendChild(tr);
+          }
+          setStatus("", false);
+        } catch (err) {
+          setStatus("Erro: " + err.message, true);
+        }
+      }
+
+      // Confirma e envia DELETE para o backend
+      async function confirmDelete(id, btn) {
+        if (!confirm("Confirma exclusão do fornecedor ID " + id + "?")) return;
+        btn.disabled = true;
+        const originalText = btn.textContent;
+        btn.textContent = "Excluindo...";
+        try {
+          const url = BASE + "/" + encodeURIComponent(id);
+          const res = await fetch(url, { method: "DELETE" });
+          if (res.ok) {
+            // atualiza lista
+            await loadFornecedores();
+            setStatus("Fornecedor excluído com sucesso.", false);
+          } else {
+            const text = await res.text().catch(() => res.statusText);
+            throw new Error("Resposta: " + res.status + " - " + text);
+          }
+        } catch (err) {
+          setStatus("Falha ao excluir: " + err.message, true);
+          btn.disabled = false;
+          btn.textContent = originalText;
+        }
+      }
+
+      function setStatus(msg, isError) {
+        statusEl.textContent = msg;
+        statusEl.style.color = isError ? "#b00020" : "#333";
+      }
+
+      // load inicial
+      loadFornecedores();
+    </script>
+  </body>
+</html>
