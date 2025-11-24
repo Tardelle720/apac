@@ -1,0 +1,715 @@
+CRITICAL - 2025-11-18 00:23:58 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: OPTIONS, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(93): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(65): CodeIgniter\HTTP\Cors->handlePreflightRequest(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:23:58 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: OPTIONS, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(93): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(65): CodeIgniter\HTTP\Cors->handlePreflightRequest(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:23:59 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: OPTIONS, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(93): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(65): CodeIgniter\HTTP\Cors->handlePreflightRequest(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:23:59 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: OPTIONS, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(93): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(65): CodeIgniter\HTTP\Cors->handlePreflightRequest(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:24:26 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: OPTIONS, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(93): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(65): CodeIgniter\HTTP\Cors->handlePreflightRequest(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:24:59 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:31:31 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:31:31 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:31:33 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:31:36 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:31:47 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:31:52 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:32:11 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: OPTIONS, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(93): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(65): CodeIgniter\HTTP\Cors->handlePreflightRequest(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:32:14 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:32:16 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:32:16 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:32:29 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:33:00 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:33:04 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: /]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:33:09 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: /]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:33:17 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: /]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:33:52 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: /]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:33:53 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: /]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:33:54 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: /]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:01 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:01 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:02 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:14 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:14 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:14 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:15 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:15 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:18 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:27 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:28 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:31 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: POST, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:37 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: POST, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:38 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: POST, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:41 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores/2]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:34:43 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: DELETE, Route: fornecedores/2]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:37:07 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:37:08 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:37:08 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:37:09 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:37:28 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:37:29 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:38:03 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:38:49 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:38:54 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:40:46 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: fornecedores/2]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:40:54 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: /]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:41:01 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: /]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:42:09 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: /]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:44:09 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: /]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(360): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\Filters\Filters->runRequired('before')
+ 7 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->runRequiredBeforeFilters(Object(CodeIgniter\Filters\Filters))
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 00:44:53 --> CodeIgniter\Exceptions\ConfigException: If wildcard is specified, you must set `'allowedOrigins' => ['*']`. But using wildcard is not recommended.
+[Method: GET, Route: /]
+in SYSTEMPATH\HTTP\Cors.php on line 108.
+ 1 SYSTEMPATH\HTTP\Cors.php(134): CodeIgniter\HTTP\Cors->checkWildcard('allowedOrigins', 2)
+ 2 SYSTEMPATH\HTTP\Cors.php(211): CodeIgniter\HTTP\Cors->setAllowOrigin(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH\Filters\Cors.php(84): CodeIgniter\HTTP\Cors->addResponseHeaders(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
